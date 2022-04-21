@@ -1,9 +1,9 @@
 import { Fragment } from "react";
+import {IoPersonSharp} from "react-icons/io5";
 
-export const PropertyProfile = ({img, lblSaludo, lblNombre}) => (
+export const PropertyProfile = (props) => (
     <Fragment >
-        <p>{img}</p>
-        <p>{lblSaludo}</p>
-        <p>{lblNombre}</p>
+        <label>{props.lblSaludo}</label>
+        <p>{props.lblNombre}</p>
     </Fragment>
 )

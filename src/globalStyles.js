@@ -7,3 +7,11 @@ export const GlobalStyle = createGlobalStyle`
         font-family: "Lato";
     }
 `
+
+export const SubTitle = styled.p `
+    color: #C0C2D2;
+    font-size: 1.0em;
+    text-transform: capitalize;
+    margin: 0;
+    margin-top: 3px;
+`
