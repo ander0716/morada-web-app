@@ -4,6 +4,7 @@ import { PropertyTypeButton } from "./components/PropertyTypeButton";
 import { PropertyTypesContainer } from "./styles";
 import {IoBusiness, IoHome, IoMap, IoPrism, IoLocation} from 'react-icons/io5'
 import { PropertyCard } from "./components/PropertyCard/Index";
+import { Page } from "../../components/Page";
 
 const Profile = {
     img:"img", lblSaludo: "Hi,", lblNombre: "Anderson Vargas" 
@@ -18,7 +19,7 @@ const PropertiesTypes = [
 ]
 
 export const Home = () => (
-    <Fragment>
+    <Page>
             <h1>Home - Morada</h1>
             <PropertyProfile img={Profile.img}/>
             <PropertyProfile lblSaludo={Profile.lblSaludo}/>
@@ -32,5 +33,5 @@ export const Home = () => (
         </PropertyTypesContainer>
 
         <PropertyCard/>
-    </Fragment>
+    </Page>
 )

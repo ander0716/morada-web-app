@@ -8,6 +8,7 @@ export const PropertyCardWrapper = styled.div `
     box-shadow: 5px 2px 7px 0px rgba(194,194,194,0.75);
     -webkit-box-shadow: 5px 2px 7px 0px rgba(194,194,194,0.75);
     -moz-box-shadow: 5px 2px 7px 0px rgba(194,194,194,0.75);
+    margin: 10px 0;
 `;
 
 export const PropertyImageWrapper = styled.div `
