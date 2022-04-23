@@ -4,7 +4,7 @@ import { Navigation } from "./Navigation";
 
 export const App = () => (
     <Fragment>
-        <GlobalStyle/>
+        <GlobalStyle />
         <Navigation />
     </Fragment>
 )

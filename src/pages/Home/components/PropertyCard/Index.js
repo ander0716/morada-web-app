@@ -1,9 +1,9 @@
 import { PropertyBusinessType } from "../../../../components/PropertyBusinessType";
 import { PropertyTypeLabel } from "../../../../components/PropertyTypeLabel";
-import { SubTitle } from "../../../../globalStyles";
+import { SubTitle, Title } from "../../../../globalStyles";
 import { PropertyImageWrapper, PropertyCardWrapper, PropertyInfoWrapper } from "./styles";
 
-export const PropertyCard = () =>(
+export const PropertyCard = () => (
     <PropertyCardWrapper>
         <PropertyImageWrapper>
             <img alt="Apartamento" src="https://images.ctfassets.net/8lc7xdlkm4kt/5XZ6f7kcqu0cVgTnFoFnLt/52ac8951ab8edd991e28b383a6eac830/61M2.jpg" />
@@ -11,11 +11,13 @@ export const PropertyCard = () =>(
         <PropertyInfoWrapper>
             <h3>Apartamento en Laureles</h3>
             <SubTitle>
-                Lureles, Medellín
+                Laureles, Medellín
             </SubTitle>
-            <PropertyTypeLabel/>
+            <PropertyTypeLabel />
             <PropertyBusinessType />
-            <p>$400,000.000</p>
+            <Title>
+                $400,000.000
+            </Title>
         </PropertyInfoWrapper>
     </PropertyCardWrapper>
 )

@@ -13,10 +13,9 @@ import { NotFound } from './pages/NotFound';
 export const Navigation = () => (
     <BrowserRouter>
         <Routes>
-            <Route path='/' element={<Home />}/>
-            <Route path='/property' element={<Property />}/>
-            <Route path='*' element={<NotFound />}/>
-
+            <Route path='/' element={<Home />} />
+            <Route path='/property' element={<Property />} />
+            <Route path='*' element={<NotFound />} />
         </Routes>
     </BrowserRouter>
 )

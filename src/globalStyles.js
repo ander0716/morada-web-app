@@ -15,3 +15,9 @@ export const SubTitle = styled.p `
     margin: 0;
     margin-top: 3px;
 `
+export const Title = styled.p `
+    color: #5178E1;
+    font-size: 1.5em;
+    margin: 0;
+    margin-top: 3px;
+`
