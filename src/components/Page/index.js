@@ -7,6 +7,9 @@ export const Page = (props) => (
         <PageWrapper>
             {props.children}
         </PageWrapper>
-        <Menu />
+        {
+            !props.hideMenu && <Menu />
+        }
+        
     </Fragment>
 )

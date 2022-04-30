@@ -7,9 +7,9 @@ import { IconWrapper, PropertyTypeButtonWraper } from "./styles";
 //     </Fragment>
 // )
 
-export const PropertyTypeButton = ({icon: Icon, label}) => (
-    <PropertyTypeButtonWraper >
-        <IconWrapper>
+export const PropertyTypeButton = ({ icon: Icon, id, label, selected, onPress }) => (
+    <PropertyTypeButtonWraper selected={selected} onClick={() => onPress(id)}>
+        <IconWrapper selected={selected}>
             <Icon />
         </IconWrapper>
         <p>{label}</p>
