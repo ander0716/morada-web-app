@@ -44,13 +44,14 @@ export const FormControl = styled.div`
 export const FormControlInput = styled.div`
     flex: 1;
     label{
+        font-size: 1.1em;
         display: block;
         font-size: 0.95em;
         color: #222;
         font-weight: 500;
     }
     input[type="email"], input[type="password"], input[type="text"], input[type="number"]{
-        font-size: 1.1em;
+        font-size: 0.8em;
         padding: 5px 10px;
         margin: 0;
         display: block;
@@ -59,6 +60,24 @@ export const FormControlInput = styled.div`
         border: none;
         outline: none;
     }
+    select{
+        font-size: 0.8em;
+        background-color: transparent;
+        width: 100%;
+        border: none;
+        padding: 5px;
+        cursor: pointer;
+        option{
+            color: #FFF;
+            background: #4A148C;
+        }
+        &:hover{
+                    background: #4A148C;
+                    cursor: pointer;
+                    color: #FFF;
+                }                
+    }
+
 `;
 
 export const FormControlAction = styled.div`

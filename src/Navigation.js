@@ -11,6 +11,7 @@ import { Favorites } from './pages/Favorites';
 import { Login } from './pages/Login';
 import { Signup } from './pages/Signup';
 import { NotFound } from './pages/NotFound';
+import { AddProperty } from './pages/AddProperty';
 
 
 
@@ -23,6 +24,7 @@ export const Navigation = () => (
             <Route path='/favorites' element={<Favorites />} />
             <Route path='/login' element={<Login />} />
             <Route path='/signup' element={<Signup />} />
+            <Route path='/add-property' element={<AddProperty />} />
             <Route path='*' element={<NotFound />} />
         </Routes>
     </BrowserRouter>
