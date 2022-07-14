@@ -11,14 +11,22 @@ export const BaseButtonStyled = css`
     border-radius: 5px;
     padding: 9px 0;
     opacity: 0.9;
+
     &:hover{
-        cursor: pointer;
         opacity: 1;
+        cursor: pointer;        
     }
 `;
 
 export const ButtonStyled = styled.button`
-    ${BaseButtonStyled}
+    ${BaseButtonStyled};
+    /* opacity: ${props => props.disabled ? 0.5 : 1};
+    cursor: ${props => props.disabled ? 'not-allowed' : 'pointer'}; */
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+    
 `;
 
 export const LinkStyled = styled(Link)` 

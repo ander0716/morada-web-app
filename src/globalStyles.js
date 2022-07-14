@@ -60,6 +60,10 @@ export const FormControlInput = styled.div`
         border: none;
         outline: none;
     }
+    span{
+        color: red;
+        font-size: 0.85em;
+    }
     select{
         font-size: 0.8em;
         background-color: transparent;
