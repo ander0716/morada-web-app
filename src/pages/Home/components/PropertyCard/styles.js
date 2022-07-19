@@ -1,6 +1,7 @@
+import {Link} from 'react-router-dom'
 import styled from 'styled-components';
 
-export const PropertyCardWrapper = styled.div `
+export const PropertyCardWrapper = styled(Link) `
     border: 1px solid #ccc;
     border-radius: 20px;
     padding: 15px;
@@ -9,6 +10,7 @@ export const PropertyCardWrapper = styled.div `
     -webkit-box-shadow: 5px 2px 7px 0px rgba(194,194,194,0.75);
     -moz-box-shadow: 5px 2px 7px 0px rgba(194,194,194,0.75);
     margin: 10px 0;
+    text-decoration: none;
 `;
 
 export const PropertyImageWrapper = styled.div `

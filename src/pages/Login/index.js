@@ -1,15 +1,19 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { Page } from '../../components/Page'
 import { FormControl, FormControlInput, FormControlAction, PageTitle } from '../../globalStyles'
 import { Button } from '../../components/Button'
 import { ButtonIcon } from '../../components/ButtonIcon';
 import { IoEyeOff, IoEye } from 'react-icons/io5';
-import { requestHttp } from "../../utils/HttpRequest";
+import { HTTP_VERBS, requestHttp } from "../../utils/HttpRequest";
 import { useForm } from 'react-hook-form';
 import { showAlert, SW_ICON } from '../../utils/SwAlert';
 import { useNavigate } from 'react-router-dom';
+import { setToken } from '../../utils/TokenLS';
+import { UserContext } from '../../contexts/UserContext';
 
 export const Login = () => {
+
+    const { user, setUser } = useContext(UserContext);
 
     const [visiblePass, setVisiblePass] = useState(false);
     const navigate = useNavigate();
@@ -17,12 +21,12 @@ export const Login = () => {
 
     const tooglePasswordVisible = () => {
         setVisiblePass(!visiblePass);
-    }
+    };
 
     const onSubmitLogin = (data) => {
         console.log('data', data);
         loginRequest(data);
-    }
+    };
 
     const loginRequest = async (data) => {
         try {
@@ -36,13 +40,17 @@ export const Login = () => {
                     body: data
                 }
             );
-            console.log(response);
-            showAlert('Bienvenido', 'Validación correcta', SW_ICON.SUCCES, () => { navigate('/')});
+            // console.log(response);
+            const { data: dataResponse } = response;
+            // await requestGetUserInfo(dataResponse.response.token);
+            setToken(dataResponse.response.token);
+
+            showAlert('Bienvenido', 'Validación correcta', SW_ICON.SUCCES, () => { navigate('/') }); // si es exitoso vuleve al home
         } catch (error) {
             showAlert('Error', 'Credenciales incorrectas', SW_ICON.ERROR);
             console.log('error', error);
         }
-    }
+    };
 
     return (
         <Page hideMenu>
