@@ -49,6 +49,7 @@ export const Home = () => {
                 endpoint: '/properties',
                 params: makePropertiesFiltes()
             });
+            console.log('response', response);
             setProperties(response.data.response.properties);
         } catch (error) {
             console.log('error', error);
