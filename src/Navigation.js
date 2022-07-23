@@ -11,6 +11,7 @@ import { Account } from './pages/Account';
 import { Favorites } from './pages/Favorites';
 import { Login } from './pages/Login';
 import { Signup } from './pages/Signup';
+import { POCUploadImage } from './pages/POCUploadImage';
 import { NotFound } from './pages/NotFound';
 import { AddProperty } from './pages/AddProperty';
 import { getToken, removeToken } from './utils/TokenLS';
@@ -65,6 +66,7 @@ export const Navigation = () => {
             <Route path='/favorites' element={<Favorites />} />
             <Route path='/login' element={<Login />} />
             <Route path='/signup' element={<Signup />} />
+            <Route path='/pocUploadImage' element={<POCUploadImage />} />
             <Route path='/add-property' element={<AddProperty />} />
             <Route path='*' element={<NotFound />} />
         </Routes>

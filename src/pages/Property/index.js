@@ -16,6 +16,11 @@ export const Property = () => {
     const [properties, setProperties] = useState([]);
 
     useEffect(() => {
+
+        // setTimeout(() => {
+        // propertyRequest(idProperty)
+        // }, 2000);
+
         propertyRequest(idProperty)
     }, []);
 
